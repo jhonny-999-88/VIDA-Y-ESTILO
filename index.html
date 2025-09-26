@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>EcoVida - Tu Emprendimiento Ecológico</title>
+  
+  <!-- Fuentes de Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+  
+  <!-- Estilos principales -->
+  <style>
+    /* RESET GLOBAL */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Roboto', sans-serif;
+    }
+    
+    body {
+      background-color: #f7f7f7;
+      color: #333;
+      font-size: 16px;
+      line-height: 1.6;
+    }
+
+    a {
+      text-decoration: none;
+      color: inherit;
+    }
+
+    h1, h2, h3, h4 {
+      margin-bottom: 0.75rem;
+      font-weight: 700;
+    }
+
+    /* Efectos de transición global */
+    * {
+      transition: all 0.3s ease;
+    }
+
+    /* Header */
+    header {
+      background: #4caf50;
+      color: white;
+      padding: 2rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      position: fixed;
+      width: 100%;
+      top: 0;
+      left: 0;
+      z-index: 1000;
+    }
+
+    header h1 {
+      font-size: 2rem;
+    }
+
+    nav a {
+      color: white;
+      margin: 0 1.5rem;
+      font-size: 1.1rem;
+      text-transform: uppercase;
+      font-weight: 500;
+      transition: color 0.3s ease;
+    }
+
+    nav a:hover {
+      color: #ffeb3b;
+    }
+
+    /* Hero Section */
+    .hero {
+      height: 100vh;
+      background: url('https://images.unsplash.com/photo-1502761188053-0a7d9c7b30a7?auto=format&fit=crop&w=1200&h=800&q=80') no-repeat center center/cover;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      color: white;
+    }
+
+    .hero h2 {
+      font-size: 4rem;
+      margin-bottom: 1.5rem;
+      text-shadow: 2px 2px 10px rgba(0,0,0,0.7);
+    }
+
+    .hero p {
+      font-size: 1.3rem;
+      max-width: 700px;
+      margin: 0 auto;
+      text-shadow: 2px 2px 10px rgba(0,0,0,0.7);
+    }
+
+    .btn-primary {
+      background-color: #4caf50;
+      color: white;
+      padding: 1rem 2rem;
+      font-size: 1.1rem;
+      border-radius: 5px;
+      transition: background-color 0.3s ease;
+    }
+
+    .btn-primary:hover {
+      background-color: #388e3c;
+    }
+
+    /* About Section */
+    .about {
+      padding: 5rem 2rem;
+      background: #ffffff;
+      text-align: center;
+    }
+
+    .about h3 {
+      font-size: 2.5rem;
+      margin-bottom: 2rem;
+      color: #388e3c;
+    }
+
+    .about p {
+      font-size: 1.2rem;
+      max-width: 800px;
+      margin: 0 auto;
+    }
+
+    /* Product Section */
+    .products {
+      padding: 4rem 2rem;
+      background: #f1f1f1;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 2rem;
+    }
+
+    .product-card {
+      background: #fff;
+      padding: 1.5rem;
+      border-radius: 10px;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .product-card:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 10px 20px rgba(0,0,0,0.15);
+    }
+
+    .product-card img {
+      width: 100%;
+      border-radius: 10px;
+      margin-bottom: 1rem;
+    }
+
+    .product-card h4 {
+      font-size: 1.6rem;
+      color: #388e3c;
+      margin-bottom: 1rem;
+    }
+
+    .product-card p {
+      color: #333;
+      margin-bottom: 1.5rem;
+    }
+
+    .product-card button {
+      background-color: #388e3c;
+      color: white;
+      padding: 0.8rem 1.5rem;
+      border: none;
+      border-radius: 5px;
+      font-size: 1rem;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+
+    .product-card button:hover {
+      background-color: #4caf50;
+    }
+
+    /* Testimonial Section */
+    .testimonials {
+      padding: 4rem 2rem;
+      background: #ffffff;
+    }
+
+    .testimonial-card {
+      background: #e8f5e9;
+      padding: 2rem;
+      border-left: 5px solid #388e3c;
+      margin-bottom: 2rem;
+      transition: background-color 0.3s ease;
+    }
+
+    .testimonial-card:hover {
+      background-color: #c8e6c9;
+    }
+
+    .testimonial-card p {
+      font-style: italic;
+      color: #555;
+    }
+
+    .testimonial-card h5 {
+      margin-top: 1rem;
+      font-weight: 600;
+      color: #388e3c;
+      text-align: right;
+    }
+
+    /* Contact Form */
+    .contact {
+      padding: 5rem 2rem;
+      background: #f1f1f1;
+    }
+
+    .contact form {
+      max-width: 600px;
+      margin: 0 auto;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .contact input, .contact textarea {
+      padding: 1rem;
+      margin-bottom: 1rem;
+      border: 2px solid #ddd;
+      border-radius: 5px;
+      font-size: 1rem;
+      font-family: 'Roboto', sans-serif;
+    }
+
+    .contact button {
+      background: #388e3c;
+      color: white;
+      padding: 1rem;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      font-size: 1.1rem;
+    }
+
+    .contact button:hover {
+      background: #4caf50;
+    }
+
+    /* Footer */
+    footer {
+      padding: 2rem;
+      background-color: #388e3c;
+      color: white;
+      text-align: center;
+    }
+
+    /* Responsive Styles */
+    @media (max-width: 768px) {
+      .products {
+        grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      }
+    }
+
+    @media (max-width: 480px) {
+      header {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+
+      header h1 {
+        font-size: 1.5rem;
+      }
+
+      nav a {
+        margin: 0.5rem 0;
+      }
+
+      .hero h2 {
+        font-size: 2.5rem;
+      }
+
+      .about p {
+        font-size: 1rem;
+      }
+
+      .product-card h4 {
+        font-size: 1.4rem;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <header>
+    <h1>EcoVida</h1>
+    <nav>
+      <a href="#inicio">Inicio</a>
+      <a href="#nosotros">Nosotros</a>
+      <a href="#productos">Productos</a>
+      <a href="#testimonios">Testimonios</a>
+      <a href="#contacto">Contacto</a>
+    </nav>
+  </header>
