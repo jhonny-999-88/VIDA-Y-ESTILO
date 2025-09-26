@@ -1,0 +1,321 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Emprendimiento: Soluciones Creativas - +51 925 052 478</title>
+  <meta name="description" content="Sitio profesional para emprendimiento: servicios, productos, galería, preguntas frecuentes y contacto. Incluye quiz interactivo y opción de llamada directa." />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    :root{--bg:#0f1724;--card:#0b1220;--muted:#9aa4b2;--accent:#06b6d4;--glass:rgba(255,255,255,0.04)}
+    *{box-sizing:border-box}
+    body{font-family:Inter,system-ui,Segoe UI,Roboto,'Helvetica Neue',Arial; margin:0; background:linear-gradient(180deg,#071026 0%, #061325 60%); color:#e6eef6; -webkit-font-smoothing:antialiased}
+    a{color:var(--accent); text-decoration:none}
+    header{padding:28px 6%; display:flex; align-items:center; justify-content:space-between}
+    .brand{display:flex;gap:14px;align-items:center}
+    .logo{width:56px;height:56px;border-radius:12px;background:linear-gradient(135deg,#06b6d4,#7c3aed);display:flex;align-items:center;justify-content:center;font-weight:800;color:#061325}
+    .nav{display:flex;gap:18px;align-items:center}
+    nav a{padding:8px 12px;border-radius:8px;font-weight:600}
+    .cta{background:linear-gradient(90deg,#06b6d4,#7c3aed);color:#061325;padding:10px 14px;border-radius:10px;font-weight:700}
+
+    .hero{padding:40px 6%;display:grid;grid-template-columns:1fr 480px;gap:40px;align-items:center}
+    .hero h1{font-size:clamp(28px,4vw,44px);margin:6px 0 12px}
+    .hero p{color:var(--muted);line-height:1.6}
+    .hero .actions{margin-top:18px;display:flex;gap:12px}
+    .btn{padding:12px 16px;border-radius:10px;font-weight:700;display:inline-flex;align-items:center;gap:8px}
+    .btn-outline{border:1px solid rgba(255,255,255,0.08);background:transparent}
+    .cards{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin-top:22px}
+    .card{background:var(--glass);padding:14px;border-radius:12px;border:1px solid rgba(255,255,255,0.03)}
+
+    .mockup{border-radius:14px;overflow:hidden;box-shadow:0 10px 30px rgba(2,6,23,0.6)}
+    .mockup img{width:100%;height:100%;object-fit:cover;display:block}
+
+    main{padding:20px 6% 80px}
+    .section{margin-top:34px}
+    .section h2{margin:0 0 12px}
+    .grid-3{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+
+    .product{background:linear-gradient(180deg,rgba(255,255,255,0.02),transparent);padding:14px;border-radius:12px;border:1px solid rgba(255,255,255,0.03)}
+    .product img{width:100%;height:160px;object-fit:cover;border-radius:10px}
+    .price{font-weight:800;margin-top:8px}
+
+    /* FAQ */
+    .faq-item{background:var(--card);padding:12px;border-radius:10px;border:1px solid rgba(255,255,255,0.03)}
+    .faq-item summary{cursor:pointer;list-style:none;outline:none}
+
+    /* Gallery */
+    .gallery{display:grid;grid-template-columns:repeat(4,1fr);gap:8px}
+    .gallery img{width:100%;height:140px;object-fit:cover;border-radius:8px}
+
+    /* Quiz */
+    .quiz{background:linear-gradient(90deg,rgba(255,255,255,0.02),transparent);padding:16px;border-radius:12px}
+    .mcq{display:flex;flex-direction:column;gap:10px}
+    .option{background:rgba(255,255,255,0.02);padding:10px;border-radius:8px;cursor:pointer;border:1px solid rgba(255,255,255,0.02)}
+    .option.selected{border-color:var(--accent);box-shadow:0 6px 18px rgba(6,182,212,0.08)}
+
+    footer{padding:28px 6%;border-top:1px solid rgba(255,255,255,0.03);display:flex;gap:20px;flex-wrap:wrap;align-items:center;justify-content:space-between}
+    .contact-card{background:linear-gradient(180deg,rgba(255,255,255,0.02),transparent);padding:14px;border-radius:12px;border:1px solid rgba(255,255,255,0.03)}
+
+    /* Responsive */
+    @media (max-width:980px){.hero{grid-template-columns:1fr;}.grid-3{grid-template-columns:1fr 1fr}.gallery{grid-template-columns:repeat(2,1fr)}.cards{grid-template-columns:repeat(2,1fr)}}
+    @media (max-width:600px){.grid-3{grid-template-columns:1fr}.cards{grid-template-columns:1fr}.gallery{grid-template-columns:1fr}}
+  </style>
+</head>
+<body>
+  <header>
+    <div class="brand">
+      <div class="logo">SC</div>
+      <div>
+        <div style="font-weight:800">Soluciones Creativas</div>
+        <div style="font-size:13px;color:var(--muted)">Emprendimiento - Diseño y Marketing</div>
+      </div>
+    </div>
+    <nav class="nav" aria-label="Principal">
+      <a href="#servicios">Servicios</a>
+      <a href="#productos">Productos</a>
+      <a href="#galeria">Galería</a>
+      <a href="#quiz">Quiz</a>
+      <a class="cta" href="tel:+51925052478">Llámanos: +51 925 052 478</a>
+    </nav>
+  </header>
+
+  <section class="hero">
+    <div>
+      <p style="color:var(--accent);font-weight:700;margin:0">Emprendimiento Profesional</p>
+      <h1>Impulsamos tu idea — diseño, marketing y operaciones para crecer</h1>
+      <p>Somos un equipo dedicado a convertir ideas en negocios rentables: branding, tienda online, estrategia digital, fotografía de producto y asesoría para ventas. Aquí encontrarás servicios y productos listos para lanzar.</p>
+      <div class="actions">
+        <a class="btn" href="#servicios" role="button">Ver servicios</a>
+        <a class="btn btn-outline" href="#contacto" role="button">Contacto / Cotización</a>
+      </div>
+
+      <div class="cards" aria-hidden="false">
+        <div class="card">
+          <strong>Consultoría</strong>
+          <div style="color:var(--muted);font-size:13px;margin-top:8px">Análisis de mercado, modelo de negocio y roadmap para tu emprendimiento.</div>
+        </div>
+        <div class="card">
+          <strong>Branding</strong>
+          <div style="color:var(--muted);font-size:13px;margin-top:8px">Identidad visual, manual de marca y diseños para redes sociales.</div>
+        </div>
+        <div class="card">
+          <strong>Tienda Online</strong>
+          <div style="color:var(--muted);font-size:13px;margin-top:8px">Creación de e‑commerce, pasarelas de pago y optimización de conversión.</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="mockup" aria-hidden="false">
+      <img src="https://images.unsplash.com/photo-1519337265831-281ec6cc8514?q=80&w=1200&auto=format&fit=crop&ixlib=rb-4.0.3&s=1a2b3c" alt="Muestra profesional de producto" />
+    </div>
+  </section>
+
+  <main>
+    <section id="servicios" class="section">
+      <h2>Servicios destacados</h2>
+      <p style="color:var(--muted)">Servicios pensados para emprendedores que necesitan resultados rápidos y sustentables.</p>
+      <div class="grid-3" style="margin-top:12px">
+        <div class="product">
+          <img src="https://images.unsplash.com/photo-1521737604893-d14cc237f11d?q=80&w=1200&auto=format&fit=crop&ixlib=rb-4.0.3&s=abc" alt="Consultoría estratégica" />
+          <h3>Plan de lanzamiento</h3>
+          <p style="color:var(--muted)">Estrategia 90 días: validación, ventas y métricas clave.</p>
+          <div class="price">Desde S/ 450</div>
+        </div>
+        <div class="product">
+          <img src="https://images.unsplash.com/photo-1498050108023-c5249f4df085?q=80&w=1200&auto=format&fit=crop&ixlib=rb-4.0.3&s=def" alt="Diseño y branding" />
+          <h3>Branding completo</h3>
+          <p style="color:var(--muted)">Logo, paleta, tipografías y kit para redes.</p>
+          <div class="price">Desde S/ 350</div>
+        </div>
+        <div class="product">
+          <img src="https://images.unsplash.com/photo-1515879218367-8466d910aaa4?q=80&w=1200&auto=format&fit=crop&ixlib=rb-4.0.3&s=ghi" alt="Tienda online" />
+          <h3>Tienda online</h3>
+          <p style="color:var(--muted)">Diseño, carga de productos y conexión a pasarelas de pago.</p>
+          <div class="price">Desde S/ 800</div>
+        </div>
+      </div>
+    </section>
+
+    <section id="productos" class="section">
+      <h2>Productos destacados</h2>
+      <p style="color:var(--muted)">Productos pensados para validar y escalar ventas.</p>
+      <div class="grid-3" style="margin-top:12px">
+        <div class="product">
+          <img src="https://images.unsplash.com/photo-1544025162-d76694265947?q=80&w=1200&auto=format&fit=crop&ixlib=rb-4.0.3&s=jkl" alt="Producto A" />
+          <h3>Paquete Starter</h3>
+          <p style="color:var(--muted)">Landing, logo y 5 publicaciones para redes.</p>
+          <div class="price">S/ 650</div>
+          <div style="margin-top:8px"><button class="btn btn-outline" onclick="addToCart('Paquete Starter',650)">Agregar</button></div>
+        </div>
+        <div class="product">
+          <img src="https://images.unsplash.com/photo-1556761175-4b46a572b786?q=80&w=1200&auto=format&fit=crop&ixlib=rb-4.0.3&s=mno" alt="Producto B" />
+          <h3>Sesión de fotos de producto</h3>
+          <p style="color:var(--muted)">30 imágenes editadas + retoque básico.</p>
+          <div class="price">S/ 300</div>
+          <div style="margin-top:8px"><button class="btn btn-outline" onclick="addToCart('Sesión de fotos',300)">Agregar</button></div>
+        </div>
+        <div class="product">
+          <img src="https://images.unsplash.com/photo-1507679799987-c73779587ccf?q=80&w=1200&auto=format&fit=crop&ixlib=rb-4.0.3&s=pqr" alt="Producto C" />
+          <h3>Pauta publicitaria (ads)</h3>
+          <p style="color:var(--muted)">Campaña 1 mes optimizada para ventas.</p>
+          <div class="price">S/ 420 (sin inversión)</div>
+          <div style="margin-top:8px"><button class="btn btn-outline" onclick="addToCart('Pauta publicitaria',420)">Agregar</button></div>
+        </div>
+      </div>
+    </section>
+
+    <section id="galeria" class="section">
+      <h2>Galería</h2>
+      <p style="color:var(--muted)">Algunas fotos de proyectos recientes.</p>
+      <div class="gallery" style="margin-top:12px">
+        <img src="https://images.unsplash.com/photo-1523275335684-37898b6baf30?q=80&w=1200&auto=format&fit=crop&ixlib=rb-4.0.3&s=aaa" alt="Proyecto 1">
+        <img src="https://images.unsplash.com/photo-1503602642458-232111445657?q=80&w=1200&auto=format&fit=crop&ixlib=rb-4.0.3&s=bbb" alt="Proyecto 2">
+        <img src="https://images.unsplash.com/photo-1559526324-593bc073d938?q=80&w=1200&auto=format&fit=crop&ixlib=rb-4.0.3&s=ccc" alt="Proyecto 3">
+        <img src="https://images.unsplash.com/photo-1498050108023-c5249f4df085?q=80&w=1200&auto=format&fit=crop&ixlib=rb-4.0.3&s=ddd" alt="Proyecto 4">
+      </div>
+    </section>
+
+    <section id="quiz" class="section">
+      <h2>Quiz rápido — ¿Tu idea está lista para vender?</h2>
+      <p style="color:var(--muted)">Responde rápido: te daremos una recomendación automatizada.</p>
+      <div class="quiz" style="margin-top:12px">
+        <div class="mcq" data-question="q1">
+          <strong>1) ¿Tienes un producto o servicio definido?</strong>
+          <div class="option" data-value="a">a) Sí, completamente definido</div>
+          <div class="option" data-value="b">b) Parcialmente</div>
+          <div class="option" data-value="c">c) No, aún en idea</div>
+        </div>
+
+        <div class="mcq" data-question="q2">
+          <strong>2) ¿Has vendido algo al menos una vez?</strong>
+          <div class="option" data-value="a">a) Sí</div>
+          <div class="option" data-value="b">b) No, pero tengo clientes potenciales</div>
+          <div class="option" data-value="c">c) No, todavía no</div>
+        </div>
+
+        <div class="mcq" data-question="q3">
+          <strong>3) ¿Tienes fotos o muestras del producto?</strong>
+          <div class="option" data-value="a">a) Sí, fotos profesionales</div>
+          <div class="option" data-value="b">b) Sí, pero básicas</div>
+          <div class="option" data-value="c">c) No</div>
+        </div>
+
+        <div style="margin-top:12px;display:flex;gap:8px;flex-wrap:wrap">
+          <button class="btn" onclick="evaluateQuiz()">Ver resultado</button>
+          <button class="btn btn-outline" onclick="resetQuiz()">Reiniciar</button>
+        </div>
+        <div id="quizResult" style="margin-top:12px;color:var(--muted)"></div>
+      </div>
+    </section>
+
+    <section id="faq" class="section">
+      <h2>Preguntas frecuentes</h2>
+      <div style="display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-top:12px">
+        <details class="faq-item"><summary><strong>¿Cómo pido una cotización?</strong></summary><div style="color:var(--muted);margin-top:8px">Puedes llamar al +51 925 052 478 o usar el formulario de contacto. En 24-48 horas te devolvemos una propuesta detallada.</div></details>
+        <details class="faq-item"><summary><strong>¿Puedo pagar en cuotas?</strong></summary><div style="color:var(--muted);margin-top:8px">Sí, ofrecemos pagos en hasta 3 cuotas para los paquetes principales. Consultar condiciones al teléfono.</div></details>
+        <details class="faq-item"><summary><strong>¿Trabajan con envíos a provincia?</strong></summary><div style="color:var(--muted);margin-top:8px">Sí, coordinamos envíos o entregas según el servicio. En e‑commerce asesoramos la integración con empresas de mensajería.</div></details>
+        <details class="faq-item"><summary><strong>¿Ofrecen garantía?</strong></summary><div style="color:var(--muted);margin-top:8px">Los servicios digitales tienen garantía de satisfacción: revisiones incluidas según el paquete contratado.</div></details>
+      </div>
+    </section>
+
+    <section id="contacto" class="section">
+      <h2>Contacto</h2>
+      <p style="color:var(--muted)">Llámanos al <strong>+51 925 052 478</strong> o envíanos un mensaje para una cotización rápida.</p>
+      <div style="display:flex;gap:18px;flex-wrap:wrap;margin-top:12px;align-items:flex-start">
+        <div class="contact-card" style="flex:1;min-width:260px">
+          <h3>Información</h3>
+          <p style="color:var(--muted)">Atendemos por teléfono, WhatsApp y correo. Horario: Lun‑Vie 9:00‑18:00</p>
+          <p style="margin:8px 0"><strong>Teléfono:</strong> <a href="tel:+51925052478">+51 925 052 478</a></p>
+          <p style="margin:8px 0"><strong>Email:</strong> contacto@solucionescreativas.pe</p>
+          <p style="margin:8px 0"><strong>Redes:</strong> Instagram • Facebook</p>
+        </div>
+
+        <form class="contact-card" style="flex:1;min-width:260px" onsubmit="sendContact(event)">
+          <h3>Enviar mensaje</h3>
+          <label style="display:block;margin-top:6px;font-size:13px">Nombre</label>
+          <input name="name" required style="width:100%;padding:10px;border-radius:8px;border:1px solid rgba(255,255,255,0.04);background:transparent;color:inherit">
+          <label style="display:block;margin-top:8px;font-size:13px">Teléfono</label>
+          <input name="phone" placeholder="Ej: +51 9XXXXXXXX" style="width:100%;padding:10px;border-radius:8px;border:1px solid rgba(255,255,255,0.04);background:transparent;color:inherit">
+          <label style="display:block;margin-top:8px;font-size:13px">Mensaje</label>
+          <textarea name="message" required style="width:100%;padding:10px;border-radius:8px;border:1px solid rgba(255,255,255,0.04);background:transparent;color:inherit;min-height:110px"></textarea>
+          <div style="margin-top:10px;display:flex;gap:8px;flex-wrap:wrap">
+            <button class="btn" type="submit">Enviar</button>
+            <a class="btn btn-outline" href="tel:+51925052478">Llamar ahora</a>
+          </div>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div style="display:flex;gap:12px;align-items:center">
+      <div style="font-weight:700">Soluciones Creativas</div>
+      <div style="color:var(--muted)">© 2025 • Emprendimiento</div>
+    </div>
+    <div style="display:flex;gap:12px;align-items:center">
+      <div style="color:var(--muted)">Contacto rápido:</div>
+      <a class="cta" href="tel:+51925052478">+51 925 052 478</a>
+    </div>
+  </footer>
+
+  <script>
+    // Simple cart + notifications
+    const cart = [];
+    function addToCart(name, price){
+      cart.push({name, price});
+      alert(name + ' agregado al carrito. Total items: ' + cart.length);
+    }
+
+    // Quiz logic
+    function evaluateQuiz(){
+      const questions = [...document.querySelectorAll('.mcq')];
+      let score = 0;
+      let answered = 0;
+      questions.forEach(q => {
+        const sel = q.querySelector('.option.selected');
+        if(sel){
+          answered++;
+          const val = sel.dataset.value;
+          if(val === 'a') score += 2;
+          else if(val === 'b') score += 1;
+        }
+      });
+      const result = document.getElementById('quizResult');
+      if(answered < questions.length){ result.textContent = 'Por favor responde todas las preguntas.'; return; }
+      let text = '';
+      if(score >= 6) text = '¡Excelente! Tu idea está lista para vender. Recomendamos lanzar una campaña de prueba y optimizar.';
+      else if(score >= 3) text = 'Vas por buen camino. Trabaja la presentación del producto y prueba una venta piloto.';
+      else text = 'Aún necesitas validar la idea. Te recomendamos empezar con prototipos y recoger feedback.';
+      result.textContent = text;
+    }
+    function resetQuiz(){
+      document.querySelectorAll('.option').forEach(o => o.classList.remove('selected'));
+      document.getElementById('quizResult').textContent = '';
+    }
+
+    // option selection
+    document.addEventListener('click', e => {
+      if(e.target.classList.contains('option')){
+        const container = e.target.closest('.mcq');
+        container.querySelectorAll('.option').forEach(o => o.classList.remove('selected'));
+        e.target.classList.add('selected');
+      }
+    });
+
+    // fake form send
+    function sendContact(e){
+      e.preventDefault();
+      const form = e.target;
+      const data = new FormData(form);
+      // In a real site you'd POST this to server. Here we simulate success.
+      alert('Mensaje enviado. Nos comunicaremos al ' + (data.get('phone') || 'teléfono proporcionado') + '.');
+      form.reset();
+    }
+
+    // Small accessibility improvement: make details keyboard-friendly
+    document.querySelectorAll('details').forEach(d => d.addEventListener('toggle', e => {
+      // nothing fancy for now
+    }));
+  </script>
+</body>
+</html>
